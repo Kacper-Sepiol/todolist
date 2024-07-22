@@ -1,5 +1,6 @@
 import { addTask } from "../../redux/actions";
 import { useDispatch } from "react-redux";
+import style from "./Form.module.css";
 
 export const Form = () => {
     const dispatch = useDispatch();
@@ -17,10 +18,16 @@ export const Form = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <p>Nazwa zadania</p>
-                <input type="nameTask" name="nameTask" required />
-                <button type="submit">Utworz</button>
+            <form onSubmit={handleSubmit} className={style.form}>
+                <input
+                    type="nameTask"
+                    name="nameTask"
+                    required
+                    className={style.form__input}
+                />
+                <button type="submit" className={style.form__button}>
+                    Utworz
+                </button>
             </form>
         </>
     );

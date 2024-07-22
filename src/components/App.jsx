@@ -1,12 +1,10 @@
-import { Form } from "./Form/Form";
-import { Task } from "./Tasks/Task";
+import style from "./App.module.css";
+import { Main } from "./Main/Main";
 
 export const App = () => {
     return (
-        <>
-            <h1>Hello world!</h1>
-            <Form />
-            <Task />
-        </>
+        <div className={style.background}>
+            <Main />
+        </div>
     );
 };
